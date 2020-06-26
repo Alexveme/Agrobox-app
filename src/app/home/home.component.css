@@ -1,0 +1,168 @@
+main {
+    position: absolute;
+    width: 768px;
+    height: 1024px;
+    z-index: -1;
+}
+
+.logout {
+    position: absolute;
+    width: 768px;
+    text-align: center;
+}
+
+.logout img {
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.logout p {
+    float: right;
+    margin-top: 40px;
+    margin-right: 8px;
+    font-family: din-2014, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.cabecera img {
+    width: 534px;
+    height: 147px;
+    margin: 80px 117px 107px 117px;
+}
+
+/**************** CATEGORIAS ********************/
+
+.categorias {
+    margin: 0px 0px 0px 80px;
+}
+
+.btn-verduras {
+    width: 162px;
+    height: 277px;
+    margin-top: 115px;
+    cursor: pointer;
+}
+
+.img-verduras {
+    width: 192px;
+    height: 220px;
+    margin-top: 26px;
+    position: absolute;
+}
+
+.btn-frutas {
+    width: 162px;
+    height: 277px;
+    margin-top: 115px;
+    cursor: pointer;
+}
+
+.img-frutas {
+    width: 220px;
+    height: 229px;
+    margin-top: 43px;
+    position: absolute;
+}
+
+.btn-otros {
+    width: 162px;
+    height: 277px;
+    margin-top: 115px;
+    cursor: pointer;
+}
+
+.img-otros {
+    width: 166px;
+    height: 260px;
+    position: absolute;
+}
+
+/***************** MENU **********************/
+
+.menu-bgcolor {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 80px;
+    background-color: #FECF20;
+    z-index: -1;
+}
+
+.btn-menu {
+    margin-top: 140px;
+}
+
+.btn-menu img {
+    margin-left: 50px;
+    margin-bottom: 8px;
+}
+
+.home img {
+    width: 103px;
+    height: 103px;
+}
+
+.productores img {
+    width: 103px;
+    height: 103px;
+}
+
+.mapa img {
+    width: 103px;
+    height: 103px;
+}
+
+.cesta img {
+    width: 103px;
+    height: 103px;
+}
+
+.btn-menu p {
+    text-align: center;
+    margin-bottom: 0px;
+    font-family: din-2014, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.numProductosCesta {
+    position: absolute;
+    margin-left: 100px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #6CE5AB;
+}
+
+.numProductosCesta p {
+    margin-top: 3px;
+    text-align: center;
+    color: white;
+    font-family: din-2014, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 25px;
+}
+
+/************ CESTA COMPRA **************/
+
+.img-doblur {
+    position: absolute;
+    z-index: -1;
+}
+
+.cesta-compra {
+    position: initial;
+    width: 768px;
+    height: 1024px;
+    float: right;
+}
+
+.btn-cerrar {
+    margin-top: 49px;
+    margin-left: 24px;
+}

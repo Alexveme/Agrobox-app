@@ -1,0 +1,22 @@
+<main>
+    <div class="text-center">
+        <form #formulario novalidate [formGroup]="login" class="form-signin">
+            <img class="mb-4" src="../../assets/img/Logo.png" alt="" width="257" height="127">
+            <h1 class="h3 mb-3 font-weight-normal">Please log in</h1>
+            <label class="sr-only">Email address</label>
+            <input type="email" name="inputEmail" class="form-control" placeholder="Email address" formControlName="inputEmail">
+            <p class="error mt-1" *ngIf="login.controls.inputEmail.errors?.pattern && login.controls.inputEmail.touched">El email no es válido</p>
+            <label class="sr-only">Password</label>
+            <input type="password" name="inputPassword" class="form-control" placeholder="Password" formControlName="inputPassword">
+            <p class="error mt-1" *ngIf="login.controls.inputPassword.errors?.required && login.controls.inputPassword.touched">Introduce el password</p>
+            <div class="register mt-2 mb-3">
+                <a href="">Forgot password?</a>
+            </div>
+            <div class="register mt-2 mb-3">
+                <p>¿Aún no tienes cuenta? <a [routerLink]="['/register']">Regístrate</a></p>
+            </div>
+            <button (click)="onSubmit($event)" [disabled]="!login.valid" class="btn btn-lg btn-primary btn-block mt-4" type="submit">Log in</button>
+            <p class="mt-4 mb-3 text-muted">© 2017-2020</p>
+        </form>
+    </div>
+</main>

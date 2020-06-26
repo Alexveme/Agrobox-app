@@ -1,0 +1,56 @@
+main {
+    position: absolute;
+    background: url('../../assets/img/frutasVoladoras.png');
+    background-size: cover;
+    background-color: #FECF20;
+    width: 768px;
+    height: 1024px;
+}
+
+.text-center {
+    text-align: center;
+    padding-top: 277px;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+input {
+    margin-top: 8px;
+    height: 44px;
+}
+
+.chackbox {
+    width: 40px;
+    height: 40px;
+}
+
+.btn-primary:disabled {
+    background-color: rgba(216, 216, 216, 29);
+    border-color: rgba(216, 216, 216, 19);
+    opacity: 100;
+}
+
+.btn-primary:hover {
+    background-color: #138496 !important;
+    border-color: #117a8b !important;
+}
+
+button {
+    background-color: black;
+    border-color: black;
+    border-radius: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.error {
+    font-size: 18px;
+    color: red;
+}

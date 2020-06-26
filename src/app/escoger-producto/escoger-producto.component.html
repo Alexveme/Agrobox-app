@@ -1,0 +1,54 @@
+<main>    
+    <div class="container-md cabecera">
+        <div class="row">
+            <div class="btn-back">
+                <img (click)="volverAgricultores()" src="../../assets/btn/back.png">
+            </div>
+            <div class="texto">
+                <img src="../../assets/img/cabecera-tres.png">
+            </div>
+        </div>
+    </div>
+    <div class="info-productor">
+        <p class="nombre mb-0">CAN BROS</p>
+        <p class="ubicacion">Sabadell</p>
+    </div>
+    <div class="container-md listado-productos">
+        <div class="row">
+            <div class="col-md-4 producto" *ngFor="let product of arrProducts">
+                <div (click)="irEscogerCantidad()" class="imagen-producto">
+                    <img src="../../assets/img/productos/{{product.name}}.png">
+                </div>
+                <p>{{product.name}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="menu"> 
+        <div class="row btn-menu">
+            <div class="col-md-3 p-0 home">
+                <img (click)="irHome()" src="../../assets/btn/btn-home.png">
+                <p>Home</p>
+            </div>
+            <div class="col-md-3 p-0 productores">
+                <img src="../../assets/btn/btn-agricultores.png">
+                <p>Agricultores</p>
+            </div>
+            <div class="col-md-3 p-0 mapa">
+                <img src="../../assets/btn/btn-mapa.png">
+                <p>Mapa</p>
+            </div>
+            <div class="col-md-3 p-0 cesta">
+                <div *ngIf="arrCesta.length > 0" class="numProductosCesta"><p>{{numProductosCesta}}</p></div>
+                <img (click)="showCesta()" src="../../assets/btn/btn-cesta.png">
+                <p>Cesta</p>
+            </div>
+        </div>
+        <div class="menu-bgcolor m-0"></div>
+    </div>
+</main>
+
+<div *ngIf="show" class="wrapper cesta-compra" ng-show="cestaVisiblity">
+    <img class="img-doblur" src="../../assets/img/doBlur.png" width="768px" height="1024px">
+    <img class="btn-cerrar" (click)="hideCesta()" src="../../assets/btn/Content/ic_clear.png" width="25" height="25">
+    <app-cesta></app-cesta> 
+</div>

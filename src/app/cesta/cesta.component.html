@@ -1,0 +1,53 @@
+
+    <div class="cesta-body">
+        <div class="agrobox-titulo">
+            <img src="../../assets/img/agrobox.png" width="165" height="40">
+        </div>
+        <div class="cuerpo-listaCesta">
+            <p *ngIf="arrCesta.length === 0" class="mensaje-cestaVacia">No tienes productos añadidos</p>
+            <div class="item-cesta mb-1" *ngFor="let producto of arrCesta">
+                <div class="row">
+                    <div class="col-6 nombreItem">
+                        <p>{{producto.name}}</p>
+                    </div>
+                    <div class="col-6 precioItem">
+                        <p>{{producto.price | number: '1.2-3':'es'}}€ unid./ kilo</p>
+                    </div>
+                </div>
+                <div class="contador-listaCesta">
+                    <div class="row">
+                        <div class="col-2">
+                            <img *ngIf="(producto.cantidad === 1)" (click)="borrarItemCesta(producto.id)" src="../../assets/btn/btn-borrar-itemCesta.png" width="44px" height="44px">
+                            <img *ngIf="(producto.cantidad > 1)" src="../../assets/btn/btn-menos.png" (click)="restarCantidad(producto.id)" width="44px" height="44px">
+                        </div>
+                        <div class="col-2 numContador mt-1">
+                            <p>{{producto.cantidad}}</p>
+                        </div>
+                        <div class="col-2">
+                            <img src="../../assets/btn/btn-mas.png" (click)="sumarCantidad(producto.id)" width="44px" height="44px">
+                        </div>
+                        <div class="col-6 totalPrecio-listaCesta">
+                            <p>Total {{totalPrecioItem[producto.id] ? totalPrecioItem[producto.id] : producto.price * producto.cantidad | number: '1.2-3':'es'}}€</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="total-compra">
+            <div class="row texto-precio">
+                <div class="col-6 total-precio p-0">
+                    <p class="total-texto mb-0">TOTAL</p>
+                    <p class="compra-texto mb-0">COMPRA</p>
+                </div>
+                <div class="col-6 precioTexto p-0">
+                    <p class="totalNumero mb-0">{{totalCesta | number: '1.2-3' : 'es'}}€</p>
+                    <p class="iva-texto mb-0">IVA incl.</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn-finalizarCompra">
+            <img (click)="finalizarCompra(totalCesta)" src="../../assets/btn/btn-finalizarCompra-active.png" width="348" height="56">
+        </div>
+    </div>
+

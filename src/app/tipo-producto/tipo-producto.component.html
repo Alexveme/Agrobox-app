@@ -1,0 +1,39 @@
+<div class="container-fluid-md tipo-producto-page">
+    <div id="backgroung">
+        <div class="producto-box">
+            <div class="checkbox-inputs">
+                <input (click)="cambiarPrecioKilo()" type="radio" name="option">
+                <label>Kilo</label>
+                <input (click)="cambiarPrecioUnidad()" checked type="radio" name="option">
+                <label>Unidad</label>
+                <img (click)="cerrarPantalla()" class="btn-close" src="../../assets/btn/Content/ic_clear.png">
+                <div class="container-md listado-producto">
+                    <p>Tipos de Cebolla</p>
+                    <div class="row">
+                        <div class="col-md-6 producto" *ngFor="let subproducto of arrSubproducts">
+                            <div class="imagen-producto">
+                                <img src="../../assets/img/productos/{{subproducto.image}}.png">
+                            </div>
+                            <div class="tipo">
+                                <p class="mb-0">{{subproducto.name}}</p>
+                            </div>
+                            <div class="precio">
+                                <p class="mb-0" *ngIf="showUnidPrice">{{subproducto.unit_price | number:'1.2-3':'es'}}€ unid.</p>
+                                <p class="mb-0" *ngIf="showKiloPrice">{{subproducto.kilo_price | number: '1.2-3': 'es'}}€ kilo</p>
+                            </div>
+                            <div class="seleccionar-cantidad">
+                                <p class="contador">{{contador[subproducto._id] ? contador[subproducto._id] : 0}}</p>
+                                <img *ngIf="(!contador[subproducto._id])" class="btn-menos" src="../../assets/btn/btn-menos-noacctive.png">
+                                <img *ngIf="(contador[subproducto._id] > 0)" (click)="restarCantidad(subproducto._id)" class="btn-menos" src="../../assets/btn/btn-menos.png">
+                                <img (click)="sumarCantidad(subproducto._id, subproducto.name, subproducto.unit_price)" class="btn-mas" src="../../assets/btn/btn-mas.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-añadir-cesta">
+                    <img (click)="addProductsToCart()" src="../../assets/btn/btn-add-cesta.png">
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>

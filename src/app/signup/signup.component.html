@@ -1,0 +1,78 @@
+<div class="container-md-fluid background">
+    <div *ngIf="confirmacion" class="alert alert-success" role="alert">
+        ¡Se ha registrado correctamente!
+      </div>
+    <!-- Default form register -->
+    <form novalidate [formGroup]="register" (ngSubmit)="recogerDatos()" class=" formulario-registro text-center border border-light p-5">
+
+        <img (click)="cerrarRegisterForm()" class="btn-close" src="../../assets/btn/Content/ic_clear.png" width="25px" height="25px">
+
+        <img class="mb-5" src="../../assets/img/logo-bgblanco.png" alt="" width="257" height="127">
+
+        <p class="h4 mb-4">Sign up</p>
+
+        <div class="form-row mb-4">
+            <div class="col">
+                <!-- First name -->
+                <input type="text" name="formFirstName" formControlName="formFirstName" class="form-control" placeholder="First name">
+                <p class="error" *ngIf="register.controls.formFirstName.errors?.required && register.controls.formFirstName.touched">Este campo debe estar rellenado</p>
+                <p class="error" *ngIf="register.controls.formFirstName.errors?.minLength && register.controls.formFirstName.touched">Éste campo debe tener mínimo 3 caracteres</p>
+            </div>
+            <div class="col">
+                <!-- Last name -->
+                <input type="text" name="formLastName" formControlName="formLastName" class="form-control" placeholder="Last name">
+            </div>
+        </div>
+
+        <!-- E-mail -->
+        <input type="email" name="formEmail" formControlName="formEmail" class="form-control" placeholder="E-mail">
+        <p class="error" *ngIf="register.controls.formEmail.errors?.required && register.controls.formEmail.touched">Este campo debe estar rellenado</p>
+        <p class="error" *ngIf="register.controls.formEmail.errors?.minLength && register.controls.formEmail.touched">Este campo debe tener mínimo 3 caracteres</p>
+        <p class="error" *ngIf="register.controls.formEmail.errors?.pattern && register.controls.formEmail.touched">El email introducido no es válido</p>
+
+        <!-- Password -->
+        <input type="password" name="formPassword" formControlName="formPassword" class="form-control mt-4" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+        <p class="error" *ngIf="register.controls.formPassword.errors?.required && register.controls.formPassword.touched">Este campo debe estar rellenado</p>
+        <p class="error" *ngIf="register.controls.formPassword.errors?.pattern && register.controls.formPassword.touched">La contraseña introducida no es válida</p>
+        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+            Debe contener, como mínimo, una mayúscula, una mínuscula y un dígito.
+        </small>
+
+        <!-- Phone number -->
+        <input type="text" name="formPhone" formControlName="formPhone" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+        <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4"></small>
+
+        <!-- Address -->
+        <input type="text" name="formAddress" formControlName="formAddress" class="form-control" placeholder="Address" aria-describedby="defaultRegisterFormAddressHelpBlock">
+        <p class="error" *ngIf="register.controls.formAddress.errors?.required && register.controls.formAddress.touched">Este campo debe estar rellenado</p>
+        <small id="defaultRegisterFormAdressHelpBlock" class="form-text text-muted mb-4"></small>
+
+        <!-- Newsletter -->
+        <!--<div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="formNewsletter">
+            <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribirme a la newsletter</label>
+        </div>-->
+
+        <!-- Sign up button -->
+        <button [disabled]="!register.valid" class="btn btn-info mt-5 my-4 btn-block" type="submit">Sign in</button>
+
+            
+        <!-- Social register -->
+        <!--<p>or sign up with:</p>
+
+        <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+        <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+        <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+        <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+        <hr>-->
+            
+        <!-- Terms of service -->
+        <p>Clickando a
+            <em>Sign up</em> está aceptando los
+            <a href="#">términos del servicio.</a>
+
+    </form>
+    <!-- Default form register -->
+ </div>
+ 

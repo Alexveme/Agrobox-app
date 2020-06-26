@@ -1,0 +1,53 @@
+<main>  
+    <div class="logout">
+        <img (click)="logOut()" src="../../assets/btn/user-icon-vector.jpg" width="50px" height="50px">
+        <p>Log out</p>
+    </div>
+    <div class="cabecera">
+        <img src="../../assets/img/cabecera.png" alt="">
+    </div>
+    <div class="container-fluid-md categorias d-flex align-items-center">
+        <div class="row w-100">
+            <div class="col-md-4 verduras">
+                <img class="img-verduras" src="../../assets/img/lechuga.png">
+                <img (click)="irComprarVerduras()" class="btn-verduras" src="../../assets/img/verduras.png">
+            </div>
+            <div class="col-md-4 frutas">
+                <img class="img-frutas" src="../../assets/img/naranjas.png">
+                <img class="btn-frutas" src="../../assets/img/frutas.png">
+            </div>
+            <div class="col-md-4 otros">
+                <img class="img-otros" src="../../assets/img/leche.png">
+                <img class="btn-otros" src="../../assets/img/otros.png">
+            </div>
+        </div>
+    </div>
+    <div class="menu"> 
+        <div class="row btn-menu">
+            <div class="col p-0 home">
+                <img src="../../assets/btn/bt-home-active.png">
+                <p>Home</p>
+            </div>
+            <div class="col p-0 productores">
+                <img src="../../assets/btn/btn-agricultores.png">
+                <p>Agricultores</p>
+            </div>
+            <div class="col p-0 mapa">
+                <img src="../../assets/btn/btn-mapa.png">
+                <p>Mapa</p>
+            </div>
+            <div class="col p-0 cesta">
+                <div *ngIf="arrCesta.length > 0" class="numProductosCesta"><p>{{numProductosCesta}}</p></div>
+                <img (click)="showCesta()" src="../../assets/btn/btn-cesta.png">
+                <p>Cesta</p>
+            </div>
+        </div>
+        <div class="menu-bgcolor m-0"></div>
+    </div>
+</main> 
+
+<div *ngIf="show" class="wrapper cesta-compra" ng-show="cestaVisiblity">
+    <img class="img-doblur" src="../../assets/img/doBlur.png" width="768px" height="1024px">
+    <img class="btn-cerrar" (click)="hideCesta()" src="../../assets/btn/Content/ic_clear.png" width="25" height="25">
+    <app-cesta></app-cesta> 
+</div>

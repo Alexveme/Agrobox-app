@@ -1,0 +1,59 @@
+<main>    
+    <div class="container-md cabecera">
+        <div class="row">
+            <div class="btn-back">
+                <img (click)="volverHome()" src="../../assets/btn/back.png" alt="">
+            </div>
+            <div class="texto">
+                <img src="../../assets/img/cabecera-dos.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container-md agricultores d-flex align-items-center">
+        <div class="row agricultores-row">
+            <div class="botones-calbruc">
+                <img class="btn-mas" src="../../assets/btn/btn-info.png" alt="">
+                <img (click)="irProductos()" class="btn-arrow" src="../../assets/btn/btn-arrow-forward.png" alt="">
+                <img (click)="irProductos()" class="btn-agricultor" src="../../assets/btn/btn-canbros.png " alt="">
+            </div>
+            <div class="botones-calcerda">
+                <img class="btn-mas" src="../../assets/btn/btn-info.png" alt="">
+                <img class="btn-arrow" src="../../assets/btn/btn-arrow-forward.png" alt="">
+                <img class="btn-agricultor" src="../../assets/btn/btn-calcerda.png" alt="">
+            </div>
+            <div class="botones-fincacaldruc">
+                <img class="btn-mas" src="../../assets/btn/btn-info.png" alt="">
+                <img class="btn-arrow" src="../../assets/btn/btn-arrow-forward.png" alt="">
+                <img class="btn-agricultor" src="../../assets/btn/btn-fincacaldruc.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="menu"> 
+        <div class="row btn-menu">
+            <div class="col p-0 home">
+                <img (click)="irHome()" src="../../assets/btn/btn-home.png" alt="">
+                <p>Home</p>
+            </div>
+            <div class="col p-0 productores">
+                <img src="../../assets/btn/btn-agricultores.png" alt="">
+                <p>Agricultores</p>
+            </div>
+            <div class="col p-0 mapa">
+                <img src="../../assets/btn/btn-mapa.png" alt="">
+                <p>Mapa</p>
+            </div>
+            <div class="col p-0 cesta">
+                <div *ngIf="arrCesta.length > 0" class="numProductosCesta"><p>{{numProductosCesta}}</p></div>
+                <img (click)="showCesta()" src="../../assets/btn/btn-cesta.png" alt="">
+                <p>Cesta</p>
+            </div>
+        </div>
+        <div class="menu-bgcolor m-0"></div>
+    </div>
+</main>
+
+<div *ngIf="show" class="wrapper cesta-compra" ng-show="cestaVisiblity">
+    <img class="img-doblur" src="../../assets/img/doBlur.png" width="768px" height="1024px">
+    <img class="btn-cerrar" (click)="hideCesta()" src="../../assets/btn/Content/ic_clear.png" width="25" height="25">
+    <app-cesta></app-cesta> 
+</div>

@@ -1,0 +1,145 @@
+main {
+    position: absolute;
+    width: 768px;
+    height: 1024px;
+    z-index: -1;
+}
+
+.btn-back {
+    width: 44px;
+    height: 44px;
+    margin-left: 118px;
+}
+
+.btn-back img {
+    width: 13px;
+    height: 21px;
+    margin-top: 150px;
+}
+
+.texto img {
+    position: absolute;
+    width: 432px;
+    height: 147px;
+    margin-top: 79px;
+}
+
+/*************** PRODUCTORES ***********/
+
+.agricultores {
+    width: 396px;
+    margin-top: 315px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.btn-agricultor {
+    width: 396px;
+    height: 80px;
+    margin-top: 40px;
+}
+
+.btn-mas {
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    background-color: transparent;
+    margin-left: 20px;
+    margin-top: 60px;
+}
+
+.btn-arrow {
+    position: absolute;
+    width: 24px;
+    height: 23px;
+    margin-left: 340px;
+    margin-top: 66px;
+}
+
+/***************** MENU **********************/
+
+.menu-bgcolor {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 80px;
+    background-color: #FECF20;
+    z-index: -1;
+}
+
+.btn-menu {
+    margin-top: 147px;
+}
+
+.btn-menu img {
+    margin-left: 50px;
+    margin-bottom: 8px;
+}
+
+.home img {
+    width: 103px;
+    height: 103px;
+}
+
+.productores img {
+    width: 103px;
+    height: 103px;
+}
+
+.mapa img {
+    width: 103px;
+    height: 103px;
+}
+
+.cesta img {
+    width: 103px;
+    height: 103px;
+}
+
+.btn-menu p {
+    text-align: center;
+    margin-bottom: 0px;
+    font-family: din-2014, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.numProductosCesta {
+    position: absolute;
+    margin-left: 100px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #6CE5AB;
+}
+
+.numProductosCesta p {
+    margin-top: 3px;
+    text-align: center;
+    color: white;
+    font-family: din-2014, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 25px;
+}
+
+/************ CESTA COMPRA **************/
+
+.img-doblur {
+    position: absolute;
+    z-index: -1;
+}
+
+.cesta-compra {
+    position: initial;
+    width: 768px;
+    height: 1024px;
+    float: right;
+}
+
+.btn-cerrar {
+    margin-top: 49px;
+    margin-left: 24px;
+}

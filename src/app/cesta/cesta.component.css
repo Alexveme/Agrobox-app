@@ -1,0 +1,131 @@
+/********** CUERPO LISTA CESTA ************/
+
+.cesta-body {
+    width: 396px;
+    height: 1024px;
+    background-color: white;
+    box-shadow: -2px -2px 20px 0px rgba(0, 0, 0, 0.25);
+    float: right;
+}
+
+.agrobox-titulo {
+    width: 170px;
+    height: 173px;
+    margin: 0 auto;
+    padding-top: 45px;
+}
+
+.mensaje-cestaVacia {
+    width: 348px;
+    height: 636px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: din-2014, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.cuerpo-listaCesta {
+    width: 348px;
+    height: 636px;
+    margin: 0 auto;
+}
+
+.cuerpo-listaCesta p {
+    font-family: din-2014, sans-serif;
+    font-style: normal;
+}
+
+.item-cesta {
+    width: 348px;
+}
+
+.nombreItem p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.precioItem {
+    text-align: right;
+}
+
+.precioItem p {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.contador-listaCesta {
+    width: 348px;
+    text-align: center;
+}
+
+.numContador {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.totalPrecio-listaCesta {
+    text-align: right;
+}
+
+.totalPrecio-listaCesta p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/*******************************************/
+
+.total-compra {
+    width: 348px;
+    margin: 0 auto;
+    height: 111px;
+    border: 2px solid rgba(216, 216, 216, 100);
+}
+
+.texto-precio {
+    width: 260px;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.total-precio p {
+    font-family: din-2014, sans-serif;
+    font-style: normal;
+}
+
+.total-precio {
+    width: 80px;
+    height: 50px;
+    text-align: center;
+}
+
+.total-precio p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.precioTexto {
+    width: 57px;
+    height: 47px;
+    text-align: center;
+}
+
+.totalNumero {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.iva-texto {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.btn-finalizarCompra img {
+    margin-top: 49px;
+    margin-left: 24px;
+    position: fixed;
+    bottom: 0px;
+    margin-bottom: 40px;
+}
